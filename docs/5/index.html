@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 5: Articulated Motion</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix">
+        <p>
+            This is a demonstration of applying deformation to create articulated motion for character modeling.
+            <br><br>
+            An alien character is drawn using many shapes. Shapes that are related (like the face, eyes, and mouth) are deformed with the same lattice. This allows for the shapes to move together, creating nice behavior. You can try changing the shape of the alien's face and watch as it does not affect the body's shape.
+            <br><br>
+            Similarly, you can see that shapes can be deformed with lattices so that they look more like the shape you want. This is evidenced by the lattices of the arms.
+            <br><br>
+            Additionally, shapes that are mostly unrelated (like the head and the body) should have different, but not entirely independent, lattices. This is because the parts of a body, though able to move separately, are still attached together and so should affect each other somewhat. You can introduce hierarchical structures to enable one lattice to influence another.
+            In this case, the head and the arms, being attached to the body, should move with it.
+            This allows for the alien to have a more natural motion, as the body parts can move independently but still interact with each other.
+            See this in action when you move the central (pale purple) control point of the body.
+            <br><br>
+            You can also start and pause an animation of the alien. (Note that you cannot drag points while the animation is underway!) Observe how the lattices move.
+            <ul>
+                <li>The body also moves up and down, and all of the body parts move with it.</li>
+                <li>The body expands and contracts, like the animation from page 2, letting the alien breathe.</li>
+                <li>Two control points of each arm are "anchored" to the shoulder so that the arm doesn't "run off" the body as the rest of the arm waves.</li>
+                <li>The central point of the head's grid (which influences the four surrounding points) is moved, moving the eyes and the mouth but leaving the circular boundary minimally affected.</li>
+            </ul>
+        </p>
+<div id="div1"></div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "../libs/CS559-Three/build/three.module.js"
+        }
+    }
+    </script>
+<script src="./5.js" type="module" defer></script>
+<canvas id="canvas" width="600" height="600"></canvas>
+<br><input type="checkbox" id="visibilityButton" checked="true">Grids Visible
+<br>&emsp;<input type="checkbox" id="headVisibility" checked="true">Head Grid
+&emsp;&emsp;&emsp;<input type="checkbox" id="bodyVisibility" checked="true">Body Grid
+<br>&emsp;<input type="checkbox" id="rightArmVisibility" checked="true">Right Arm Grid
+&emsp;<input type="checkbox" id="leftArmVisibility" checked="true">Left Arm Grid
+<br><input type="checkbox" id="animating">Play Animation
+<!--
+<br><input type="range" id="speedSlider" min="0" max="5" step = "0.2" value="1">Speed of Animation
+<br><input type="range" id="sizeSlider" min="5" max="20" value="10">Amount of Size Increase
+-->
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 4: Make Your Own Portfolio</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 4: Make your own)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: 2D Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: 2D Animated Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Lattice Deformations with Simplified UI </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Multiple Lattice Deformations & Shapes </a></li>
+        <li class="Side__Item Side__Selected"> 5: Articulated Motion </li>
+
+</ul>
+</div>
+</div>
+    </body>
+</html>

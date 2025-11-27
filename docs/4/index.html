@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 4: Multiple Lattice Deformations & Shapes</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix">
+            <p>
+                This is a demonstration of the flexibility of deformation. You can give each shape its own lattice, where each lattice can be controlled independently. You can also use the same lattice for multiple shapes.
+                <br><br>
+                These concepts are very useful. Think about animating a character. You might want to bend the arm at the elbow. This would require moving the shape that forms the skin and the shape that forms the sleeves at the same time. In this case, it is useful to have both deformed by the same lattice. However, you probably would not want the deformation of the arm to affect the deformation of the leg. In this case, it is useful to have separate lattices for each shape.
+                <br><br>
+                This change required setting up the structures for the lattices and shapes differently, to allow for the flexibility of having any number of lattices and any number of shapes.
+            </p>
+            <p>
+                You can use the checkbox to toggle the visibility of the grid.
+            </p>
+<div id="div1"></div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "../libs/CS559-Three/build/three.module.js"
+        }
+    }
+    </script>
+<script src="./4.js" type="module" defer></script>
+<canvas id="canvas" width="600" height="600"></canvas>
+<br><input type="checkbox" value="Grids Visible" id="visibilityButton" checked="true">Grids Visible 
+<!--
+<br><input type="range" id="speedSlider" min="0" max="5" step = "0.2" value="1">Speed of Animation
+<br><input type="range" id="sizeSlider" min="5" max="20" value="10">Amount of Size Increase
+-->
+<p><a href="../../docs/5/" class="Next__Page">Next: Articulated Motion </a></p>
+     
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 4: Make Your Own Portfolio</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 4: Make your own)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: 2D Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: 2D Animated Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Lattice Deformations with Simplified UI </a></li>
+        <li class="Side__Item Side__Selected"> 4: Multiple Lattice Deformations & Shapes </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Articulated Motion </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

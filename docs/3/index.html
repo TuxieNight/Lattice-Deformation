@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 3: Lattice Deformations with Simplified UI</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix">
+        <p>
+            Now it is your turn to test out animating with lattice deformation. This page not only demonstrates the benefits of animating with lattice deformations, but also shows how a simplified UI can make the process easier. This demonstration gives the user some additional control points that simplifies the process of deforming an object to a desired shape.
+            <br><br>
+            The additional (blue) control points affect the four points of the grid cell they belong to, effectively making common large-scale changes easier. The actual grid control points can still be altered to make more precise changes.
+            <br><br>
+            The animating feature transitions between the two states the user sets. The additional (blue) control points are useful, because they make make getting the desired states much easier.
+            <br><br>
+            By default, state1 and state2 are both set to be the initial, undeformed heart position. To change one of the states to a certain grid setup, first deform the grid to the desired setup. Then, click the button of the desired state to change. After setting up the desired states, checkmark the transition checkbox to see the animation between the two states. The speed of the animation can be adjusted with the slider below.
+            <br><br>
+            As usual, users can get a better view of their beautiful animation by setting the grid to be invisible.
+        </p>
+<div id="div1"></div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "../libs/CS559-Three/build/three.module.js"
+        }
+    }
+    </script>
+<script src="./3.js" type="module" defer></script>
+<canvas id="canvas" width="600" height="600"></canvas>
+<br><input type="checkbox" value="Grid Visible" id="visibilityButton" checked>Grid Visible 
+<br><input type="range" id="speedSlider" min="0" max="5" step = "0.2" value="1">Speed of Animation
+<br><button id="state1Button">Set State 1</button> <button id="state2Button">Set State 2</button>
+<br><input type="checkbox" value="State Animate" id="transitionButton">Transition Between States
+
+<p>
+    Again, note how using lattice deformation makes it easier to animate the shape. The two states only have to store the positions of the control points, rather than the positions of all the points in the shape. This is beneficial storage-wise and also makes animating simpler. Additionally, the animation can be easily updated by changing the control points, rather than having to change each individual point of the shape.
+</p>
+
+<p><a href="../../docs/4/" class="Next__Page">Next: Multiple Lattice Deformations & Shapes </a></p>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 4: Make Your Own Portfolio</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 4: Make your own)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: 2D Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: 2D Animated Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Selected"> 3: Lattice Deformations with Simplified UI </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Multiple Lattice Deformations & Shapes </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Articulated Motion </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

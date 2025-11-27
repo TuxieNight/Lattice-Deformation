@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 2: 2D Animated Deformation with Lattices</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix">
+            <p>
+                Lattice deformation can be useful for creating animations. By gradually changing the positions of the control points, we can create smooth transitions between different states. Additionally, the animations can easily be updated when using deformation, because they only require changing a few parameters. It is much easier to animate a few control points than it is to animate the entire shape. This is especially true for complex shapes, where animating the entire shape would be very difficult. By using lattice deformation, we can create smooth animations with minimal effort.
+            </p>
+            <p>This is a demonstration of 2D animated deformation using lattices.</p>
+            <p>
+                You can use the checkbox to toggle the visibility of the grid.
+            </p>
+<div id="div1"></div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "../libs/CS559-Three/build/three.module.js"
+        }
+    }
+    </script>
+<script src="./2.js" type="module" defer></script>
+<canvas id="canvas" width="600" height="600"></canvas>
+<br><input type="checkbox" value="Grid Visible" id="visibilityButton" checked>Grid Visible 
+<br><input type="range" id="speedSlider" min="0" max="5" step = "0.2" value="1">Speed of Animation
+<br><input type="range" id="sizeSlider" min="5" max="20" value="10">Amount of Size Increase
+
+<p>
+    The slider for size changes how far the control points are moved. This type of animation update is much easier when done by changing the control points than by changing each individual point of the shape.
+</p>
+
+<p><a href="../../docs/3/" class="Next__Page">Next: Lattice Deformations with Simplified UI </a></p>
+     
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 4: Make Your Own Portfolio</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 4: Make your own)</a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/1/">1: 2D Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Selected"> 2: 2D Animated Deformation with Lattices </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Lattice Deformations with Simplified UI </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Multiple Lattice Deformations & Shapes </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Articulated Motion </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    
+<!-- CS559 Workbook Pages - page content &copy; 2021, Michael Gleicher -->
+<!-- This page is part of a Workbook developed for the 
+    CS559 Computer Graphics Class at the University of Wisconsin
+    https://graphics.cs.wisc.edu/Courses/559-sp2025/ -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../../css/workbook.css">
+        <script src="../../js/resizeIFrames.js"></script>
+    </head>
+    <body>
+        <div class="container container--outer"><div class="maincolumn">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header"><h1 class="post__title">Page 1: 2D Deformation with Lattices</h1>
+		</header>
+        
+        
+        
+		<div class="content post__content clearfix"><p>The below is a demonstration of 2D deformation using lattices.</p>
+        <p>
+            Lattice deformation uses a grid of control points to deform a shape. The control points are used to determine the position of the shape's points.
+            The points of the shape are affected by the four closest control points (the control points of the grid cell they belong to). Each point remembers its undeformed position relative to its control points and uses this relative position to determine its new position when the control points are moved. We convert from relative position to absolute position using bilinear interpolation.
+        </p>
+        <p>
+            Click and drag the points to deform the grid. Use the slider to change the number of control points. Use the checkbox to toggle the visibility of the grid.
+        </p>
+        <p>
+            The heart itself is made of multiple points connected with lineTo().
+            <br> The heart's points are moved when the control points are dragged, causing a change in the direction of the lines and overall deformation of the shape.
+            <br> Each of the heart's points are only affected by the 4 closest control points.
+        </p>
+<div id="div1"></div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "../libs/CS559-Three/build/three.module.js"
+        }
+    }
+    </script>
+<script src="./1.js" type="module" defer></script>
+<canvas id="canvas" width="600" height="600"></canvas>
+<br><input type="checkbox" value="Grid Visible" id="visibilityButton" checked>Grid Visible 
+<br><input type="range" id="pointSlider" min="2" max="10" value="4"> Number of Control Points
+
+<p>
+    Notice how the number of control points affects the amount of ease and control you have over the shape. With more control points, you have more control over the shape, but it is harder to use the lattice. For example, the more control points you have, the more points you have to drag to get the desired shape. Additionally, more control points can make it harder to avoid undesired sharp edges. With fewer control points, it is easier to use the lattice, but you have less control over the shape. The number of control points is a tradeoff between ease of use and control over the shape.
+</p>
+
+<p><a href="../../docs/2/" class="Next__Page">Next: 2D Animated Deformation with Lattices </a></p>
+
+            
+			
+		</div>
+	</article>
+</main>
+
+                </div>
+                    <div class="sidebar">
+<h2 class="Side_Title">Portfolio 4: Make Your Own Portfolio</h2>
+<p class="Side__Note">Pages:</p>
+<ul class="Side__List">
+    <li class="Side__Item Side__Unselected"><a href="../../">Index (Portfolio 4: Make your own)</a></li>
+        <li class="Side__Item Side__Selected"> 1: 2D Deformation with Lattices </li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/2/">2: 2D Animated Deformation with Lattices </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/3/">3: Lattice Deformations with Simplified UI </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/4/">4: Multiple Lattice Deformations & Shapes </a></li>
+        <li class="Side__Item Side__Unselected"> <a href="../../docs/5/">5: Articulated Motion </a></li>
+</ul>
+</div>
+</div>
+    </body>
+</html>
